@@ -1,4 +1,4 @@
-@extends('layouts.app')
+ @extends('layouts.app')
 
 @section('content')
 
@@ -14,7 +14,7 @@
                                             <div class="page-header-icon"><i data-feather="activity"></i></div>
                                            {{ __('Dashboard') }}
                                         </h1>
-                                        <div class="page-header-subtitle">All your activities are here</div>
+                                        <div class="page-header-subtitle">All your activities are here </div>
                                     </div>
 
                                 </div>
