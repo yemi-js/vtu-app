@@ -39,6 +39,8 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+        $this->middleware('referral');
+
     }
 
     /**
@@ -56,6 +58,7 @@ class RegisterController extends Controller
         ]);
     }
 
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -64,10 +67,28 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $users=User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $user = User::orderBy('id', 'desc')->first();
+        $user->hasWallet('my-wallets'); // bool(false)
+        $wallet = $user->createWallet([
+        'name' => $data['name'],
+        'slug' => 'my-wallet',
+    ]);
+
+    return $users;
+    return $wallet;
+
+    //  if(Auth::user()->role == '1'){
+    //         return redirect()->route('admin_dashboard');
+    //     } else {
+    //         return redirect()->route('dashboard');
+    //  }
+
     }
+
 }

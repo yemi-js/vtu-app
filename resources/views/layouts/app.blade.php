@@ -15,17 +15,21 @@
         <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" crossorigin="anonymous"></script>
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+        @livewireStyles
     </head>
 
-     <body class="nav-fixed">
+    <body class="nav-fixed">
 
-        @include('layouts.topnavbar')
+    @include('layouts.topnavbar')
 
-        @include('layouts.sidenavbar')
+      @include('layouts.sidenavbar')
+
+
 
         {{-- Scripts --}}
 
         @yield('content')
+          @livewireScripts
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="{{ asset('dist/js/scripts.js')}}"></script>

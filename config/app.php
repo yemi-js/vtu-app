@@ -123,6 +123,8 @@ return [
 
     'key' => env('APP_KEY'),
 
+    'auth_key' => env('AUTH_KEY'),
+
     'cipher' => 'AES-256-CBC',
 
     /*
@@ -194,6 +196,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Questocat\Referral\ReferralServiceProvider::class,
+
+        // vendor\questocat\laravel-referral\src\ReferralServiceProvider::class;
 
     ],
 

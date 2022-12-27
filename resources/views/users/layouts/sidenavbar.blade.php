@@ -8,38 +8,42 @@
                      <!-- Sidenav Menu Heading (Core)-->
                      <div class="sidenav-menu-heading">Main</div>
                      <!-- Sidenav Accordion (Dashboard)-->
-                     <a class="nav-link collapsed" href="{{ route('admin_dashboard') }}">
+                     <a class="nav-link collapsed" href="{{ route('dashboard') }}">
                          <div class="nav-link-icon"><i data-feather="activity" class="text-warning"></i></div>
                          Dashboard
 
                      </a>
 
                      <!-- Sidenav Heading (Custom)-->
-                     <div class="sidenav-menu-heading">Users Management</div>
+                     <div class="sidenav-menu-heading">Purchase </div>
                      <!-- Sidenav Accordion (Pages)-->
-                     <a class="nav-link collapsed" href="{{ route('admin_userlist') }}">
+                     <a class="nav-link collapsed" href="{{ route('buy-airtime') }}">
                          <div class="nav-link-icon"><i data-feather="users" class="text-warning"></i></div>
-                         Users List
+                         Buy Airtime
 
                      </a>
                      <!-- Sidenav Accordion (Applications)-->
-                     <a class="nav-link collapsed" href="{{ route('admin_fundwallet') }}" aria-expanded="false"
+                     <a class="nav-link collapsed" href="{{ route('buy-data') }}" aria-expanded="false"
                          aria-controls="collapseApps">
                          <div class="nav-link-icon"><i data-feather="dollar-sign" class="text-warning"></i></div>
-                         Fund User Wallet
+                         Buy Data
                      </a>
 
                      <!-- Sidenav Accordion (Flows)-->
                      <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse"
                          data-bs-target="#collapseFlows" aria-expanded="false" aria-controls="collapseFlows">
                          <div class="nav-link-icon"><i data-feather="repeat" class="text-warning"></i></div>
-                         Referral Payout
+                         Electric Bill
+                     </a>
+                     <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse"
+                         data-bs-target="#collapseFlows" aria-expanded="false" aria-controls="collapseFlows">
+                         <div class="nav-link-icon"><i data-feather="repeat" class="text-warning"></i></div>
+                         Cable TV Payments
                      </a>
 
                      <!-- Sidenav Heading (UI Toolkit)-->
                      <div class="sidenav-menu-heading">TRANSACTIONS</div>
-                     <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse"
-                         data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                     <a class="nav-link collapsed" href="{{ route('transactions') }}"  aria-expanded="false" aria-controls="collapsePages">
                          <div class="nav-link-icon"><i data-feather="layout" class="text-warning"></i></div>
                          Transaction History
 
@@ -91,7 +95,7 @@
                          @auth()
                              {{ Auth::user()->name }}
                          @endauth
-                        
+
                      </div>
                  </div>
              </div>

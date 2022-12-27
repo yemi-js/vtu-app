@@ -11,10 +11,10 @@
                                 <div class="row align-items-center justify-content-between">
                                     <div class="col-auto">
                                         <h1 class="page-header-title">
-                                            <div class="page-header-icon"><i data-feather="activity"></i></div>
-                                           {{ __('Dashboard') }}
+                                            <div class="page-header-icon"><i data-feather="dollar-sign"></i></div>
+                                           {{ __('Fund Users Wallet') }}
                                         </h1>
-                                        <div class="page-header-subtitle">All your activities are here </div>
+                                        <div class="page-header-subtitle">Add Money to a users wallet balance </div>
                                     </div>
 
                                 </div>

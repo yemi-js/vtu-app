@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use App\Http\Middleware\isAdminAuth;
 
 class AdminController extends Controller
 {
@@ -13,7 +15,9 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
+        $this->middleware('isAdminAuth');
+
     }
 
     /**
@@ -26,5 +30,10 @@ class AdminController extends Controller
         return view('admin.pages.dashboard');
     }
 
-    
+    public function userslist()
+    {
+         return view('admin.pages.userlist');
+    }
+
+
 }
